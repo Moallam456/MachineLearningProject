@@ -1,0 +1,20 @@
+Document the structure of folders
+state the creation of a virtual local environment and the installation of packages related to that specific environment
+mention the requirements.txt, which contains the specific library we all use for this project
+---------------------------------------------------------------------------------------------
+Explain the training, validation and testing phase. And why testing data is done on one model
+and how this helps avoid overfitting and misleading winner choice.
+---------------------------------------------------------------------------------------------
+The shared data cleaning
+---------------------------------------------------------------------------------------------
+Individual preprocessing pipeline for each regression, clustering and classification models
+Explain each model individually and their outputs, evaluating the performance.
+---------------------------------------------------------------------------------------------
+For Regression: 
+one variable Regression:
+                implement scikit learn's LinearRegression that uses direct fitting without using alpha
+                Implement gradient descent using alpha
+                Compare between their implementation, computation, results and performance
+                We have experimented both regression methods on a small hypothetical dataset to compare between the two methods
+
+Multi-Variable Regression implementation

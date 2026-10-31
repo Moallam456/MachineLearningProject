@@ -1,0 +1,49 @@
+T for task done by model: predicting ADR for every booking
+E for experience: historical bookings with known ADR (lodging charges/nights)
+P for performance: accuracy of ADR predictions done by model on the bookings it hasnot trained on
+-------------------------------------------------------------------------------------
+\(X\): the selected input features.
+\(y\): the known, recorded ADR.
+\(\hat y\): the model’s predicted ADR.
+
+In regression, you give the model X,Y during training (supervised training)
+During testing, the model takes X for unknown ADRs and try to predict the value "Yhat" (Regression)
+The model must adhere to the concept of generalization (accurate prediction of ADRs for new bookings)
+Overfitting the model makes it suitable for the data used for training only (not generalized model)
+-------------------------------------------------------------------------------------
+The model will go through three phases: training, validation and testing
+Training	     Fit the model and its preprocessing	           Learn regression coefficients and scaling parameters
+Validation	     Guide development decisions	                   Compare models or choose settings
+Test	         Assess the final chosen approach	               Estimate performance on unseen bookings after development is complete
+
+Validation does not guarantee we select the truly best model. 
+It lets us make that choice while preserving separate data for assessing the result.
+Running multiple models using test data can lead to misleading choice of the winner model due to overfitting
+-------------------------------------------------------------------------------------
+One Variable Regression Model:
+"Yhat = thetanode + theta x X"
+where X is the lead time in days, Yhat is the predicted ADR, the thetas are the parameters the model choose upon training
+The cost function calculates half the mean of the error squared:
+               J(thetanode, theta1) = 1/(2m) sum((Yhat - Y)^2): where m is the number of training data
+The parameters "thetanode, theta1" must minimize the cost of the model
+
+Gradient Descent calculations (we want it low): thetanew = thetaold - alpha* derivative of J relative to thetas
+where alpha is the learning rate controlling the update size
+derivative of J is: dJ/dthetanode = 1/m sum(error)
+                    dJ/dtheta1 = 1/m sum(error*X), where error is Yhat - y
+-------------------------------------------------------------------------------------
+We want the hyperparameter (alpha) that makes J reaches the minimum (zero) and makes theta settle
+Choosing a high alpha value can make the theta oscillate around the theta that would achieve a min J
+-------------------------------------------------------------------------------------
+usage of scikit learn's library
+X_scaled = scaler.fit_transform(X_train) -> z= (inputs- mean of inputs)/standard deviation
+-------------------------------------------------------------------------------------
+
+Multi-Variable Regression Model:
+Yhat = XW + thetanode, where X is the input features and W is the weight of each feature for every booking
+X and W are vector matrices
+-------------------------------------------------------------------------------------
+why scaling matters when features have different units and ranges??
+for a leadtime of 200, and adults of 2, alpha = 0.1 have very different weights on the update size
+if we make alpha very small, adult feature will be learnt very slowly. with the value 0.1 for alpha,
+the leadtime feature can cause a great update leading to oscillations.
