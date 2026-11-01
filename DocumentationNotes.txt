@@ -5,7 +5,7 @@ mention the requirements.txt, which contains the specific library we all use for
 Explain the training, validation and testing phase. And why testing data is done on one model
 and how this helps avoid overfitting and misleading winner choice.
 ---------------------------------------------------------------------------------------------
-The shared data cleaning
+The shared data cleaning (data inspection, )
 ---------------------------------------------------------------------------------------------
 Individual preprocessing pipeline for each regression, clustering and classification models
 Explain each model individually and their outputs, evaluating the performance.
@@ -18,3 +18,18 @@ one variable Regression:
                 We have experimented both regression methods on a small hypothetical dataset to compare between the two methods
 
 Multi-Variable Regression implementation
+
+Data Split is chronological depending on the arrival date:
+Training	July 2015–December 2016	51,822
+Validation	January–April 2017	12,297
+Final test	May–August 2017	15,211
+
+Exploratory Data Analysis (EDA) on training data: use a histogram to visualise the 99th percentile of the data
+                                                  use a log histogram to visualise far data
+preprocessing pipeline for regression: numerical: using simpleimputer to fill the missing values using median
+                                                  normalisation or scaling of the values using StandardScaler
+                                       categorical: one-hotend encoding gives each room type its separate weight
+creating a train_baseline: mean predictor and LinearRegression using ready made libraries 
+                           to give us a base to compare our models to.
+
+Note: Do not forget to write a description for each code file

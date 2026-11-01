@@ -1,0 +1,8 @@
+check,count
+missing_children,4
+missing_country,20
+zero_adr,927
+zero_nights,247
+zero_total_guests,105
+adr_above_1000_review_only,1
+repeated_rows,18513

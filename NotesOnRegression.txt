@@ -47,3 +47,9 @@ why scaling matters when features have different units and ranges??
 for a leadtime of 200, and adults of 2, alpha = 0.1 have very different weights on the update size
 if we make alpha very small, adult feature will be learnt very slowly. with the value 0.1 for alpha,
 the leadtime feature can cause a great update leading to oscillations.
+
+Data Cleaning and Preprocessing:
+Numerical columns: fill missing values using the training median, then apply StandardScaler
+Categorical columns: use one-hot encoding
+usage of vnew = vold + g*momentum, which is 0.9 in our cause
+thetanew = thetaold - v*alpha
