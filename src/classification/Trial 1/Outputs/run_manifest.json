@@ -1,0 +1,61 @@
+{
+  "run_timestamp_cairo": "2026-11-05T15:42:33+02:00",
+  "input_format": "Excel .xlsx; original CSV copies retained for verification",
+  "model": "Original untuned DecisionTreeClassifier(random_state=42)",
+  "fit_split": "training only",
+  "same_fitted_pipeline_for_all_scores": true,
+  "test_used_for_tuning": false,
+  "file_sha256": {
+    "train_baseline.py": "6f0f2aff63c399692827317536a917be125d77d2c768e42794c747dec5399c46",
+    "outputs\\excel_inputs\\H2_testing_15.xlsx": "4d26410fa8ca2f10f59a5e0f641ab8d6e3c44659ab46cb8eed8ac4bb7bf28c34",
+    "outputs\\excel_inputs\\H2_training_70.xlsx": "8878aabdac6a95d28edf3934693940bbc0b15aa2e9d1a770dd782547eedee79d",
+    "outputs\\excel_inputs\\H2_validation_15.xlsx": "b2bac63e8e3aa0e785fbcd62efc30fd16e6dd5348d02ec432060448a40df4dc9",
+    "data\\splits\\filtered\\H2_test_filtered.csv": "36aa4805c4deff57d2495b7d1ab56e35dcea026435f70ed86173a2f5de87ff96",
+    "data\\splits\\filtered\\H2_train_filtered.csv": "d26b97a006a40a2c1b5494928f46588c366867e70e45c31cc6619f45e8d3a1c9",
+    "data\\splits\\filtered\\H2_validation_filtered.csv": "4746df0669b20e21c25ffd69c092c26d58990af20b9ed91f476796d887725598"
+  },
+  "results": [
+    {
+      "model": "DecisionTree_baseline",
+      "split": "training",
+      "rows": 20249,
+      "n_original_features": 23,
+      "canceled_rows": 9464,
+      "cancellation_rate": 0.46738110523976495,
+      "accuracy": 0.9963948836979604,
+      "always_zero_accuracy": 0.532618894760235,
+      "precision_1": 1.0,
+      "recall_1": 0.9922865595942519,
+      "f1_1": 0.996128347918324,
+      "roc_auc": 0.9999738951715522
+    },
+    {
+      "model": "DecisionTree_baseline",
+      "split": "validation",
+      "rows": 4339,
+      "n_original_features": 23,
+      "canceled_rows": 2028,
+      "cancellation_rate": 0.4673887992625029,
+      "accuracy": 0.8709380041484213,
+      "always_zero_accuracy": 0.5326112007374971,
+      "precision_1": 0.869215291750503,
+      "recall_1": 0.8520710059171598,
+      "f1_1": 0.8605577689243028,
+      "roc_auc": 0.8714000317493644
+    },
+    {
+      "model": "DecisionTree_baseline",
+      "split": "test",
+      "rows": 4340,
+      "n_original_features": 23,
+      "canceled_rows": 2029,
+      "cancellation_rate": 0.4675115207373272,
+      "accuracy": 0.8656682027649769,
+      "always_zero_accuracy": 0.5324884792626728,
+      "precision_1": 0.8547595682041217,
+      "recall_1": 0.8585510103499261,
+      "f1_1": 0.8566510941726088,
+      "roc_auc": 0.8666162367864153
+    }
+  ]
+}

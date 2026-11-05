@@ -1,0 +1,2 @@
+model,split,rows,n_original_features,canceled_rows,cancellation_rate,accuracy,always_zero_accuracy,precision_1,recall_1,f1_1,roc_auc
+DecisionTree_baseline,test,4340,23,2029,0.4675115207373272,0.8656682027649769,0.5324884792626728,0.8547595682041217,0.8585510103499261,0.8566510941726088,0.8666162367864153

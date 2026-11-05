@@ -1,0 +1,89 @@
+Trial 0 execution: 2026-11-05T15:42:33+02:00
+Command: python train_baseline.py --evaluate-test
+Training: 20,249 rows, 46.74% cancellations
+Validation: 4,339 rows, 46.74% cancellations
+Predictors: 23; target: IsCanceled (excluded from predictors)
+WARNING: ADR and other mutable inputs need booking-time availability checks.
+NOTE: The source was IQR-filtered before splitting; scores describe that filtered population.
+Training accuracy: 0.9964
+
+===== Validation =====
+model: DecisionTree_baseline
+split: validation
+rows: 4339
+n_original_features: 23
+canceled_rows: 2028
+cancellation_rate: 0.4674
+accuracy: 0.8709
+always_zero_accuracy: 0.5326
+precision_1: 0.8692
+recall_1: 0.8521
+f1_1: 0.8606
+roc_auc: 0.8714
+Confusion matrix (rows=actual, columns=predicted; order=[0, 1]):
+[[2051  260]
+ [ 300 1728]]
+              precision    recall  f1-score   support
+
+           0       0.87      0.89      0.88      2311
+           1       0.87      0.85      0.86      2028
+
+    accuracy                           0.87      4339
+   macro avg       0.87      0.87      0.87      4339
+weighted avg       0.87      0.87      0.87      4339
+
+
+===== Test =====
+model: DecisionTree_baseline
+split: test
+rows: 4340
+n_original_features: 23
+canceled_rows: 2029
+cancellation_rate: 0.4675
+accuracy: 0.8657
+always_zero_accuracy: 0.5325
+precision_1: 0.8548
+recall_1: 0.8586
+f1_1: 0.8567
+roc_auc: 0.8666
+Confusion matrix (rows=actual, columns=predicted; order=[0, 1]):
+[[2015  296]
+ [ 287 1742]]
+              precision    recall  f1-score   support
+
+           0       0.88      0.87      0.87      2311
+           1       0.85      0.86      0.86      2029
+
+    accuracy                           0.87      4340
+   macro avg       0.87      0.87      0.87      4340
+weighted avg       0.87      0.87      0.87      4340
+
+Results saved in: D:\UNI\senior\senior 1\Machine Learning\project\Folder 1\Trial 0\outputs\metrics\filtered_stratified
+
+===== Training =====
+model: DecisionTree_baseline
+split: training
+rows: 20249
+n_original_features: 23
+canceled_rows: 9464
+cancellation_rate: 0.4674
+accuracy: 0.9964
+always_zero_accuracy: 0.5326
+precision_1: 1.0000
+recall_1: 0.9923
+f1_1: 0.9961
+roc_auc: 1.0000
+Confusion matrix (rows=actual, columns=predicted; order=[0, 1]):
+[[10785     0]
+ [   73  9391]]
+              precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     10785
+           1       1.00      0.99      1.00      9464
+
+    accuracy                           1.00     20249
+   macro avg       1.00      1.00      1.00     20249
+weighted avg       1.00      1.00      1.00     20249
+
+
+Saved exact training-only fitted pipeline: D:\UNI\senior\senior 1\Machine Learning\project\Folder 1\Trial 0\model\decision_tree_baseline.joblib
