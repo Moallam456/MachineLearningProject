@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Trial 0 - Training</title><style>body{margin:0;background:#eef2f7;color:#17253b;font:17px 'Segoe UI',sans-serif}main{max-width:1100px;margin:24px auto;padding:28px 36px;background:white;border-radius:16px;border-top:7px solid #176f85}h1{font-size:30px;margin:0 0 8px}h2{font-size:20px;margin:22px 0 10px}.sub{color:#536479;margin:0 0 18px;font-size:15px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}table{border-collapse:collapse;width:100%;font-size:17px}td,th{padding:10px 12px;border-bottom:1px solid #e1e7ef;text-align:left}th{background:#eaf3f6;color:#174d60}.number{font-weight:700;color:#126d83}pre{font:15px/1.45 Consolas,monospace;background:#f2f5f9;padding:14px;white-space:pre-wrap}.note{font-size:14px;color:#536479;margin-top:20px}.big{font-size:32px;color:#126d83;font-weight:700}a{color:#176f85;margin-right:20px}nav{margin-top:20px}p{line-height:1.45}</style></head><body><main><h1>Trial 0 | Training</h1><p class="sub">Original untuned Decision Tree &bull; random_state=42 &bull; 2026-11-05T15:42:33+02:00</p><p><b>20,249</b> bookings &bull; <b>9,464</b> canceled &bull; cancellation rate <b>46.74%</b></p><div class="grid"><section><h2>Prediction metrics</h2><table><tr><th>Metric</th><th>Measured value</th></tr><tr><td>Accuracy</td><td class="number">99.64%</td></tr><tr><td>Precision (canceled)</td><td class="number">100.00%</td></tr><tr><td>Recall (canceled)</td><td class="number">99.23%</td></tr><tr><td>F1 (canceled)</td><td class="number">99.61%</td></tr><tr><td>ROC AUC</td><td class="number">1.0000</td></tr></table></section><section><h2>Confusion matrix</h2><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>predicted_0</th>
+      <th>predicted_1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>actual_0</th>
+      <td>10785</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>actual_1</th>
+      <td>73</td>
+      <td>9391</td>
+    </tr>
+  </tbody>
+</table><p class="note">Rows: actual labels. Columns: predicted labels.<br>0 = not canceled; 1 = canceled.</p></section></div><h2>Classification report</h2><pre>              precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00     10785
+           1       1.00      0.99      1.00      9464
+
+    accuracy                           1.00     20249
+   macro avg       1.00      1.00      1.00     20249
+weighted avg       1.00      1.00      1.00     20249
+</pre><p class="note">Training performance is measured on the data used to fit the model; it is not an independent evaluation.</p><nav><a href="00_overview.html">Overview</a><a href="01_training.html">Training</a><a href="02_validation.html">Validation</a><a href="03_testing.html">Testing</a></nav></main></body></html>

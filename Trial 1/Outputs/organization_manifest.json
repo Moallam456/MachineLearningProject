@@ -1,0 +1,19 @@
+{
+  "organization_only": true,
+  "model_settings_unchanged": true,
+  "preprocessing_settings_unchanged": true,
+  "input_files_and_fitted_pipeline_match_trial0": true,
+  "separate_preprocessor_predictions_match_full_pipeline": true,
+  "new_training_or_test_scoring_performed": false,
+  "outputs_provenance": "Copied from original Trial 0 run with identical fitted model and data",
+  "file_sha256": {
+    "Excel Sheet Inputs\\H2_training_70.xlsx": "8878aabdac6a95d28edf3934693940bbc0b15aa2e9d1a770dd782547eedee79d",
+    "Excel Sheet Inputs\\H2_validation_15.xlsx": "b2bac63e8e3aa0e785fbcd62efc30fd16e6dd5348d02ec432060448a40df4dc9",
+    "Excel Sheet Inputs\\H2_testing_15.xlsx": "4d26410fa8ca2f10f59a5e0f641ab8d6e3c44659ab46cb8eed8ac4bb7bf28c34",
+    "Model/decision_tree_baseline.joblib": "73c398c9f9a09e2459608fa889d5e8027ea43893cab3f5a0fac40f797d9772bc",
+    "Model/train_baseline.py": "c40a4e35e98004db003e48f6343b62e60dd0c36f373767fca6a888bd8259d6c6",
+    "Processing/preprocessing.py": "39567aadbabcce6c99c5c10d95e216560316fe3e2cc03398967b7c4caf0bd731",
+    "Processing/fitted_preprocessor.joblib": "fe996f6e31451a2dacafb9bfdffcb057665302b3e4806bbba375c5dbe1dfbb36",
+    "run_trial.py": "6becf0415e8887a8ded799fffb56a341ce37850af15b937fcf64984d5c32614d"
+  }
+}
